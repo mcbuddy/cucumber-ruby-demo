@@ -19,4 +19,4 @@ jobs:
       run: bundle install
 
     - name: Run Cucumber Test
-      run: bundle exec cucumber       
+      run: HEADLESS=true bundle exec cucumber       
