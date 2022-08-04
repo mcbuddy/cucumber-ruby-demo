@@ -12,6 +12,7 @@ ENV['PATH'] = "#{webdriver_directory}:" + ENV['PATH']
 
 options = Selenium::WebDriver::Chrome::Options.new
 options.add_argument('--headless') if ENV['HEADLESS']
+options.add_argument('--disable-dev-shm-usag')
 options.add_argument('--disable-gpu')
 
 
