@@ -19,4 +19,6 @@ jobs:
       run: bundle install
 
     - name: Run Cucumber Test
-      run: HEADLESS=true bundle exec cucumber       
+      run: |
+        which chrome
+        HEADLESS=true bundle exec cucumber       
