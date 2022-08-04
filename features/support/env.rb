@@ -3,6 +3,7 @@ require 'capybara/cucumber'
 require 'cucumber'
 require 'pry'
 require 'rspec'
+require 'selenium-webdriver'
 require 'webdrivers' unless File.exist?('/usr/bin/chromedriver')
 
 chrome_options = { args: %w[ --no-sandbox --enable-automation --disable-gpu ]}
