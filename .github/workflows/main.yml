@@ -14,10 +14,7 @@ jobs:
       uses: browser-actions/setup-chrome@latest
       with:
         chrome-version: latest
-      run: | 
-        chrome --version  
-        chromedriver --version
-
+      
     - name: Bundle Install
       run: bundle install
 
