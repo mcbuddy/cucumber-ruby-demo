@@ -5,7 +5,7 @@ require 'pry'
 require 'rspec'
 require 'webdrivers'
 
-chrome_options = { args: [ "--no-sandbox" ]}
+chrome_options = { args: %w[ --no-sandbox --enable-automation --disable-gpu ]}
 
 options = Selenium::WebDriver::Chrome::Options.new(chrome_options)
 options.headless! if ENV['HEADLESS']
