@@ -11,15 +11,9 @@ jobs:
         ruby-version: 3.1.2
 
     - name: Chrome Install
-      run: |
-        export VERSION="104.0.5112.79"
-        wget "https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_${VERSION}_amd64.deb"
-        sudo dpkg -i "google-chrome-stable_${VERSION}_amd64.deb"
-        apt-get install google-chrome-stable
-  
-        wget "https://chromedriver.storage.googleapis.com/${VERSION}/chromedriver_linux64.zip"
-        unzip chromedriver_linux64.zip
-        mv chromedriver /usr/bin/
+      uses: browser-actions/setup-chrome@latest
+      with:
+        chrome-version: stable
 
     - name: Bundle Install
       run: bundle install
