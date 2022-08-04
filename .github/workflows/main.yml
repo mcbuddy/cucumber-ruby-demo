@@ -23,5 +23,6 @@ jobs:
 
     - name: Run Cucumber Test
       run: |
-        which chrome
-        HEADLESS=true bundle exec cucumber       
+        CHROMIUM_BIN=$(which chrome) \
+        HEADLESS=true \
+        bundle exec cucumber       
