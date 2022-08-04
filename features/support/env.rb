@@ -6,10 +6,10 @@ require 'rspec'
 require 'selenium-webdriver'
 require 'webdrivers' unless File.exist?('/usr/bin/chromedriver')
 
-chrome_options = { args: %w[ --no-sandbox --disable-dev-shm-usage --enable-automation --disable-gpu --remote-debugging-port=9222 ]}
+options = Selenium::WebDriver::Chrome::Options.new
+options.add_argument('--headless') if ENV['HEADLESS']
+options.add_argument('--disable-gpu')
 
-options = Selenium::WebDriver::Chrome::Options.new(**chrome_options)
-options.headless! if ENV['HEADLESS']
 
 Capybara.register_driver :selenium do |app|
   Capybara::Selenium::Driver.new(app, browser: :chrome, timeout: 30, options: options)
