@@ -6,7 +6,7 @@ require 'rspec'
 require 'selenium-webdriver'
 require 'webdrivers' unless File.exist?('/usr/bin/chromedriver')
 
-chrome_options = { args: %w[ --no-sandbox --disable-dev-shm-usage --enable-automation --disable-gpu ]}
+chrome_options = { args: %w[ --no-sandbox --disable-dev-shm-usage --enable-automation --disable-gpu --remote-debugging-port=9222 ]}
 
 options = Selenium::WebDriver::Chrome::Options.new(**chrome_options)
 options.headless! if ENV['HEADLESS']
