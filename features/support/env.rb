@@ -14,6 +14,7 @@ options = Selenium::WebDriver::Chrome::Options.new
 options.add_argument('--headless') if ENV['HEADLESS']
 options.add_argument('--disable-dev-shm-usage')
 options.add_argument('--disable-gpu')
+options.add_argument('--remote-debugging-port=9222')
 
 
 Capybara.register_driver :selenium do |app|
