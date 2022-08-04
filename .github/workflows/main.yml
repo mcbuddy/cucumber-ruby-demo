@@ -1,4 +1,4 @@
-name: Cucumber Ruby Demo 
+name: Cucumber Ruby Demo
 on: [push, pull_request]
 jobs:
   build:
@@ -14,12 +14,15 @@ jobs:
       uses: browser-actions/setup-chrome@latest
       with:
         chrome-version: latest
-      
+
     - name: Bundle Install
       run: bundle install
 
     - name: Run Cucumber Test
       run: |
-        CHROMIUM_BIN=$(which chrome) \
-        HEADLESS=true \
-        bundle exec cucumber       
+        printenv | sort
+        which chrome
+        chrome --version
+        chromedriver --version
+        
+        HEADLESS=true bundle exec cucumber
