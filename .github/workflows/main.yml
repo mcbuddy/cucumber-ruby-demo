@@ -13,7 +13,7 @@ jobs:
     - name: Chrome Install
       uses: browser-actions/setup-chrome@latest
       with:
-        chrome-version: stable
+        chrome-version: 103
 
     - name: Bundle Install
       run: bundle install
