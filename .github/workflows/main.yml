@@ -12,7 +12,7 @@ jobs:
 
     - name: Chrome Install
       run: |
-        VERSION = "103.0.5060.134"
+        export VERSION="103.0.5060.134"
         wget "https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_${VERSION }_amd64.deb"
         sudo dpkg -i "google-chrome-stable_${VERSION}_amd64.deb"
         apt-get install google-chrome-stable
