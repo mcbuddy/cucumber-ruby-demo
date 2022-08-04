@@ -4,7 +4,11 @@ require 'cucumber'
 require 'pry'
 require 'rspec'
 require 'selenium-webdriver'
-require 'webdrivers/chromedriver' unless File.exist?('/usr/bin/chromedriver')
+require 'webdrivers/chromedriver'
+
+webdriver_local_path = Webdrivers::Chromedriver.update
+webdriver_directory = webdriver_local_path.split('/')[0..-2].join('/')
+ENV['PATH'] = "#{webdriver_directory}:" + ENV['PATH']
 
 options = Selenium::WebDriver::Chrome::Options.new
 options.add_argument('--headless') if ENV['HEADLESS']
