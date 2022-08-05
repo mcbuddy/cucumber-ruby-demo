@@ -19,7 +19,7 @@ jobs:
       run: |
         wget "https://chromedriver.storage.googleapis.com/104.0.5112.79/chromedriver_linux64.zip"
         unzip chromedriver_linux64.zip
-        sudo mv chromedriver /user/bin/
+        sudo mv chromedriver /usr/bin/
 
     - name: Bundle Install
       run: bundle install
