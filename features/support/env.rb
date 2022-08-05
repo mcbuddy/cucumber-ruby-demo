@@ -7,7 +7,7 @@ require 'selenium-webdriver'
 require 'webdrivers'
 
 Capybara.register_driver :chrome do |app|
-  Capybara::Selenium::Driver.new(app, browser: :chrome, timeout: 30, options: options)
+  Capybara::Selenium::Driver.new(app, browser: :chrome, timeout: 30)
 end
 
 Capybara.configure do |config|
