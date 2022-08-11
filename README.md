@@ -1,11 +1,20 @@
 # Cucumber Ruby Demo
 
 Ini adalah source code dari video tutorial dtechover - belajar QA Youtube channel.
-Anda bisa lihat videonya di (sini)[]
-Tutorial ini menggunakan Cucumber dan Ruby 3.1.2 
+Anda bisa lihat videonya di [sini](link)
+
+Tutorial ini menggunakan Cucumber dan Ruby 3.1.2
+Cucumber Testing Framework [link](https://cucumber.io/)
+Ruby Progamming Language [link](https://www.ruby-lang.org/en/)
+
+RVM [link](https://rvm.io/)
+Rbenv [link](https://github.com/rbenv/rbenv)
+
+Test Demo App [link]("http://automationpractice.com/index.php")
+
+Chromedriver [link](https://chromedriver.chromium.org/downloads)
 
 # Cheatsheet dari Capybara dan Rspec
-
 ## Navigasi 
     visit(url)
 
